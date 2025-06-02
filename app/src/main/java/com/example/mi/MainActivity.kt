@@ -103,7 +103,11 @@ class MainActivity : AppCompatActivity() {
 
             if (isSolved()) {
                 handler.removeCallbacks(updateTimer)
-                Toast.makeText(this, "Solved in $moveCount moves and $elapsedTime seconds!", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    this,
+                    "Solved in $moveCount moves and $elapsedTime seconds!",
+                    Toast.LENGTH_LONG
+                ).show()
             }
         }
     }
@@ -153,6 +157,7 @@ class MainActivity : AppCompatActivity() {
         }
         return inversions
     }
+
     fun generateSolvablePuzzle(): List<Int> {
         val puzzle = (0 until 16).toMutableList()
         do {
